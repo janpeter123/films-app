@@ -1,0 +1,59 @@
+section{
+    display: flex;
+    margin-top: 0;
+    width: 100%;
+}
+
+h1 ,h5, .overview{
+    font-size: 4rem;
+    color: white;
+    opacity: 0.8;
+}
+
+h5{
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+}
+
+
+.content{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+.info{
+    width: 50%;
+    align-self: flex-start;
+}
+
+#poster{
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+
+.overview{
+    font-size: 1.2rem;
+}
+
+.date{
+    display: flex;
+}
+
+html{
+    height: 100%;
+    width: 100%;
+}
+.loading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 12rem;
+}
+
+.loading h1{
+    opacity: 1;
+}
