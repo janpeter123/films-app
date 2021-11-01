@@ -1,7 +1,7 @@
 import "../Styles/Filmes.css";
 import { useEffect, useState } from "react";
 import StarRateRoundedIcon from "@mui/icons-material/StarRateRounded";
-import { Route, Link, BrowserRouter , useParams} from "react-router-dom";
+import {Link} from "react-router-dom";
 import Detalhes from "./Detalhes";
 
 function Filmes() {
@@ -42,7 +42,7 @@ function Filmes() {
             opacity: "0.6",
           }}
         ></div>
-          <Link to={`/detalhes/${movies[0].id}`}>
+          <Link to={`/details/${movies[0].id}`}>
             <h1 id="title_hero">{movies[0].original_title}</h1>
           </Link>
         </div>
@@ -53,7 +53,7 @@ function Filmes() {
           <div className="Filmes">
             {movies.map((movie) => {
               return (
-                <Link to={`/detalhes/${movie.id}`} key={movie.id}>
+                <Link to={`/details/${movie.id}`} key={movie.id}>
                   <div className="Filme">
                     <img
                       src={
@@ -81,11 +81,8 @@ function Filmes() {
             {series.map((serie) => {
               return (
                 <Link
-                  to={`/detalhes/${serie.id}`}
+                  to={`/details_tv_show/${serie.id}`}
                   key={serie.id}
-                  onClick={(e) => {
-                    e.preventDefault();
-                  }}
                 >
                   <div className="Filme">
                     <img
