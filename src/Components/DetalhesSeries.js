@@ -73,6 +73,9 @@ function Detalhes() {
               <h5>{date}</h5>
             </div>
             <p className="overview">{movie.overview}</p>
+            {console.log(movie.networks) }
+            <h4>Available On:</h4>
+            {movie.networks.map((network)=>{return <p className="networks">{network.name}</p>})}
           </section>
         </section>
       </section>

@@ -33,7 +33,7 @@ function Detalhes() {
       const data = await res.json();
       await defineDate(data.release_date);
       setMovie(data);
-      setLoading(false);
+      await setLoading(false);
     }
     getMovie();
   }, []);
