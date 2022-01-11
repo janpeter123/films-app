@@ -1,12 +1,11 @@
-import { Route, Link, BrowserRouter , useParams} from "react-router-dom";
+import {Link} from "react-router-dom";
 import "../Styles/Navbar.css";
-
 
 function Navbar() {
   return (
     <nav>
       <Link to={"/"} className="Logo">
-        <img src="/Logo.png" width="180px"></img>
+        <img src="/Logo.png" width="180px" alt="Logo"></img>
       </Link>
       <ul>
         <li></li>
@@ -14,16 +13,16 @@ function Navbar() {
           <Link to={"/"}>Home</Link>
         </li>
         <li>
-          <Link to={"#"}>Movies</Link>
+          <a href="#Filmes">Movies</a>
         </li>
         <li>
-          <Link to={"#"}>TV Shows</Link>
+          <a href="#Series">Tv Shows</a>
         </li>
-        <Link to={"#"}>
+        <a href='https://www.linkedin.com/in/janpetermerkel/'>
           <li className="Criador">
-            <p>Creator</p>
+            Creator
           </li>
-        </Link>
+        </a>
       </ul>
     </nav>
   );

@@ -3,7 +3,7 @@ import Home from "./Home";
 import Detalhes from "./Components/Detalhes";
 import DetalhesSeries from "./Components/DetalhesSeries";
 import ErrorPage from "./Components/ErrorPage";
-import { Route, Link, BrowserRouter, Switch } from "react-router-dom";
+import { Route, BrowserRouter, Switch } from "react-router-dom";
 
 function App() {
   return (

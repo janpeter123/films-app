@@ -1,12 +1,10 @@
 import "../Styles/Filmes.css";
 import { useEffect, useState } from "react";
 import StarRateRoundedIcon from "@mui/icons-material/StarRateRounded";
-import {Link} from "react-router-dom";
-import Detalhes from "./Detalhes";
+import { Link } from "react-router-dom";
 
 function Filmes() {
   const [movies, setMovies] = useState([{ backdrop_path: "null" }]);
-  const [hero, setHero] = useState([]);
   const [series, setSeries] = useState([]);
 
   useEffect(() => {
@@ -35,19 +33,20 @@ function Filmes() {
       <section>
         {/* */}
         <div id="div_hero">
-        <div
-          id="backdrop"
-          style={{
-            backgroundImage: `url("https://image.tmdb.org/t/p/original/${movies[0].backdrop_path}")`,
-            opacity: "0.6",
-          }}
-        ></div>
+          <div
+            id="backdrop"
+            style={{
+              backgroundImage: `url("https://image.tmdb.org/t/p/original/${movies[0].backdrop_path}")`,
+              opacity: "0.6",
+            }}
+          ></div>
           <Link to={`/details/${movies[0].id}`}>
             <h1 id="title_hero">{movies[0].original_title}</h1>
           </Link>
         </div>
         <section>
-          <div className="titulo" id="section">
+          <div className="titulo" id="section"
+          ><div id="Filmes"></div>
             <h1 className="tituloFilmes">Trending Movies</h1>
           </div>
           <div className="Filmes">
@@ -61,6 +60,7 @@ function Filmes() {
                       }
                       width="160px"
                       height="236px"
+                      alt="Movie Poster"
                     />
                     <div className="ratings">
                       <StarRateRoundedIcon style={{ color: "gold" }} />
@@ -77,13 +77,10 @@ function Filmes() {
           <div className="titulo">
             <h1 className="tituloFilmes">Trending TV shows</h1>
           </div>
-          <div className="Series">
+          <div className="Series" id="Series">
             {series.map((serie) => {
               return (
-                <Link
-                  to={`/details_tv_show/${serie.id}`}
-                  key={serie.id}
-                >
+                <Link to={`/details_tv_show/${serie.id}`} key={serie.id}>
                   <div className="Filme">
                     <img
                       src={
@@ -91,6 +88,7 @@ function Filmes() {
                       }
                       width="160px"
                       height="236px"
+                      alt="Tv show poster"
                     />
                     <div className="ratings">
                       <StarRateRoundedIcon style={{ color: "gold" }} />
