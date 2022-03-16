@@ -1,5 +1,5 @@
 ## Purpose of this App
-At the college our team had to develop a Netflix Like app for Desktop and Mobile, I ended up with my own version of the same app.
+At the college our team had to develop a Netflix Like app for Desktop (React.js) and Mobile (React Native), I ended up with my own version of the same app.
 
 ## What's the difference between them?
 My app has some features focused on User experience, I have created it from scratch focusing on Technologies like React with Chakra ui and React Router Dom.
